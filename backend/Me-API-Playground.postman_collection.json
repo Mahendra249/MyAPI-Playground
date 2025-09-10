@@ -1,0 +1,160 @@
+{
+  "info": {
+    "name": "Profile API Collection",
+    "_postman_id": "e1b6c3f1-1234-4567-8910-abcdef123456",
+    "description": "Collection for Profile CRUD and search APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Profile",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john@example.com\",\n  \"education\": \"B.Tech in Computer Science\",\n  \"skills\": [\"React\", \"Node.js\", \"MongoDB\"],\n  \"projects\": [{\"title\": \"Portfolio Website\", \"description\": \"My personal portfolio website\"}],\n  \"work\": [\"Intern at ABC Corp\"]\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/createProfile",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "createProfile"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Profile",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"education\": \"M.Tech in Computer Science\",\n  \"skills\": [\"React\", \"Node.js\", \"MongoDB\", \"Express\"]\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/updateProfile",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "updateProfile"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Profile",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/profile",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "profile"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Profile",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/deleteProfile",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "deleteProfile"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Projects By Skill",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/projects?skill=React",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "projects"],
+          "query": [
+            {
+              "key": "skill",
+              "value": "React"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Top Skills",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/skills/top",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "skills", "top"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Search Profile",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/search?q=John",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "search"],
+          "query": [
+            {
+              "key": "q",
+              "value": "John"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/health",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "health"]
+        }
+      },
+      "response": []
+    }
+  ]
+}

@@ -1,0 +1,247 @@
+/* General */
+.dashboard {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f9fafb 0%, #e5e7eb 100%);
+  padding: 2rem 1rem;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #111827;
+}
+
+.dashboard-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Loader */
+.dashboard-loader {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #d1d5db;
+  border-top: 4px solid #374151;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Cards */
+.card {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+.card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #111827;
+}
+
+/* Header */
+.header-card {
+  padding: 0;
+  overflow: hidden;
+}
+.header-banner {
+  height: 120px;
+  background: linear-gradient(to right, #f3f4f6, #e5e7eb);
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  margin-top: -40px;
+}
+.avatar-box {
+  background: white;
+  padding: 12px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.avatar {
+  width: 64px;
+  height: 64px;
+  color: #374151;
+}
+.header-actions {
+  display: flex;
+  gap: 1rem;
+}
+.header-card h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0 1.5rem;
+  color: #111827;
+}
+.header-card .email {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 1.5rem 1.5rem;
+  color: #6b7280;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+.job h3 {
+  font-weight: bold;
+  color: #111827;
+}
+.job .company {
+  color: #6b7280;
+}
+.job .details {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+/* Skills */
+.skill {
+  margin-bottom: 1rem;
+}
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  color: #111827;
+}
+.skill-bar {
+  background: #e5e7eb;
+  height: 6px;
+  border-radius: 6px;
+}
+.skill-bar div {
+  background: #374151;
+  height: 6px;
+  border-radius: 6px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  max-height: 50px;
+  gap: 6px;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.btn.edit {
+  background: #374151;
+  color: white;
+}
+.btn.delete {
+  background: #dc2626;
+  color: white;
+}
+.btn.save {
+  background: #16a34a;
+  color: white;
+}
+.btn.cancel {
+  background: #9ca3af;
+  color: white;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Links */
+.link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: 0.3s;
+  color: #374151;
+}
+.link:hover {
+  background: #f3f4f6;
+}
+
+/* Edit Form */
+.edit-card input {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  color: #111827;
+  background: #f9fafb;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.form-grid .col-span {
+  grid-column: span 2;
+}
+.btn-group {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .avatar {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+.project {
+  margin-bottom: 1.5rem;
+}
+
+.project h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+  color: #111;
+}
+
+.project .description {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+.project .skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.project .skill-tag {
+  background: #f3f3f3;
+  border: 1px solid #ddd;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  color: #222;
+}
