@@ -16,7 +16,7 @@ Frontend (React) <--> Backend (Node.js/Express) <--> Database (MongoDB)
 Frontend Hosted : https://my-api-playground-frontend.vercel.app/
 backend Hosted : https://myapi-playground-backend-1.onrender.com/
 
-Repositary of Github: 
+Repositary of Github: https://github.com/Mahendra249/MyAPI-Playground.git
 ## 2. Setup
 
 ### Local Setup
